@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | HomeReno Picks</title>
+  <meta name="description" content="Privacy Policy for HomeReno Picks, a curated home renovation and kitchen appliance guide for US homeowners and builders." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange:    #E8531A;
+      --orange-lt: #F47B4A;
+      --navy:      #1B3A5C;
+      --navy-lt:   #2C5282;
+      --cream:     #FAFAF8;
+      --band:      #F2EDE8;
+      --border:    #E0D8D0;
+      --text:      #2D2D2D;
+      --muted:     #6B6B6B;
+      --white:     #FFFFFF;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ── TOP TRUST BANNER ── */
+    .trust-banner {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+    .trust-banner span {
+      color: var(--orange-lt);
+      font-weight: 600;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, var(--orange) 0%, #C94310 100%);
+      color: var(--white);
+      padding: 48px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 50%;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -40px;
+      width: 260px; height: 260px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+
+    .header-icon {
+      font-size: 44px;
+      display: block;
+      margin-bottom: 14px;
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(26px, 5vw, 38px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+    .header-sub {
+      font-size: 15px;
+      opacity: 0.88;
+      max-width: 480px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .effective-badge {
+      display: inline-block;
+      margin-top: 18px;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 30px;
+      padding: 6px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ── QUICK NAV ── */
+    .quick-nav {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin: 36px auto;
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .quick-nav-wrap {
+      padding: 0 20px;
+    }
+    .quick-nav h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 14px;
+    }
+    .quick-nav ol {
+      padding-left: 18px;
+    }
+    .quick-nav li {
+      margin-bottom: 7px;
+    }
+    .quick-nav a {
+      color: var(--orange);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .quick-nav a:hover { color: var(--navy); text-decoration: underline; }
+
+    /* ── SECTIONS ── */
+    .policy-body {
+      padding: 0 0 60px;
+    }
+
+    .policy-section {
+      background: var(--white);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 32px 32px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 600px) {
+      .policy-section { padding: 24px 20px; }
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--orange);
+      margin-bottom: 8px;
+    }
+
+    .policy-section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(18px, 3vw, 22px);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .policy-section p {
+      color: var(--text);
+      margin-bottom: 14px;
+      font-size: 15.5px;
+    }
+    .policy-section p:last-child { margin-bottom: 0; }
+
+    .policy-section ul, .policy-section ol {
+      padding-left: 22px;
+      margin-bottom: 14px;
+    }
+    .policy-section li {
+      margin-bottom: 8px;
+      font-size: 15.5px;
+      color: var(--text);
+    }
+    .policy-section strong { color: var(--navy); }
+
+    /* highlight box */
+    .highlight-box {
+      background: #FFF5F0;
+      border-left: 4px solid var(--orange);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 18px 0;
+      font-size: 15px;
+    }
+    .highlight-box p { margin: 0; color: var(--navy); font-weight: 500; }
+
+    /* info box */
+    .info-box {
+      background: #EFF6FF;
+      border-left: 4px solid var(--navy-lt);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 18px 0;
+      font-size: 15px;
+    }
+    .info-box p { margin: 0; color: var(--navy); }
+
+    /* ── AMAZON DISCLOSURE BAND ── */
+    .amazon-band {
+      background: var(--band);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .amazon-band-icon { font-size: 32px; flex-shrink: 0; margin-top: 2px; }
+    .amazon-band h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .amazon-band p { font-size: 15.5px; margin-bottom: 10px; color: var(--text); }
+    .amazon-band p:last-child { margin-bottom: 0; }
+    .amazon-disclosure-text {
+      font-weight: 600;
+      color: var(--orange);
+      font-size: 15.5px;
+    }
+    @media (max-width: 500px) {
+      .amazon-band { flex-direction: column; gap: 10px; }
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      padding: 36px 24px;
+      font-size: 13.5px;
+      line-height: 1.8;
+    }
+    footer strong { color: var(--white); }
+    footer .orange { color: var(--orange-lt); font-weight: 600; }
+    footer a { color: var(--orange-lt); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .footer-divider { margin: 14px auto; border: none; border-top: 1px solid rgba(255,255,255,0.12); max-width: 300px; }
+  </style>
+</head>
+<body>
+
+  <!-- Trust Banner -->
+  <div class="trust-banner">
+    🔒 Your privacy matters. &nbsp;<span>We never sell your personal data.</span>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <span class="header-icon">🏠</span>
+    <h1>Privacy Policy</h1>
+    <p class="header-sub">HomeReno Picks — Trusted home renovation &amp; kitchen appliance guide for US homeowners and builders</p>
+    <span class="effective-badge">Effective Date: June 1, 2025</span>
+  </header>
+
+  <!-- Quick Nav -->
+  <div class="quick-nav-wrap">
+    <div class="quick-nav">
+      <h2>Jump To A Section</h2>
+      <ol>
+        <li><a href="#overview">Overview &amp; Who We Are</a></li>
+        <li><a href="#information-collected">Information We Collect</a></li>
+        <li><a href="#how-we-use">How We Use Your Information</a></li>
+        <li><a href="#cookies">Cookies &amp; Tracking</a></li>
+        <li><a href="#amazon">Amazon Affiliate Disclosure</a></li>
+        <li><a href="#third-parties">Third-Party Links &amp; Services</a></li>
+        <li><a href="#childrens-privacy">Children's Privacy</a></li>
+        <li><a href="#data-security">Data Security</a></li>
+        <li><a href="#your-rights">Your Rights &amp; Choices</a></li>
+        <li><a href="#changes">Changes to This Policy</a></li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Body -->
+  <div class="container policy-body">
+
+    <!-- 1. Overview -->
+    <div class="policy-section" id="overview">
+      <span class="section-label">Section 01</span>
+      <h2>Overview &amp; Who We Are</h2>
+      <p>Welcome to <strong>HomeReno Picks</strong> ("we," "us," or "our"). We operate a curated product guide website focused on helping home builders, renovation contractors, and families across the United States find high-quality, energy-efficient home improvement and kitchen appliance products.</p>
+      <p>This Privacy Policy explains how we collect, use, and protect any information when you visit our website hosted at GitHub Pages. We are committed to being transparent about our practices and respecting your privacy at every step.</p>
+      <div class="highlight-box">
+        <p>🔑 <strong>Short version:</strong> We run a simple, informational website with affiliate links to Amazon. We do not collect personal data. We do not run ads, sell data, or create user accounts.</p>
+      </div>
+    </div>
+
+    <!-- 2. Information Collected -->
+    <div class="policy-section" id="information-collected">
+      <span class="section-label">Section 02</span>
+      <h2>Information We Collect</h2>
+      <p>Because HomeReno Picks is a static informational website with no registration, login, or forms, we collect very limited information:</p>
+      <ul>
+        <li><strong>Automatically collected data:</strong> When you visit our site, standard web server logs may record your IP address, browser type, device type, pages visited, and time of visit. This data is handled by GitHub Pages (our hosting provider) and is subject to <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub's Privacy Statement</a>. We do not independently access or store these logs.</li>
+        <li><strong>Affiliate click data:</strong> When you click a "View on Amazon" button, Amazon may set cookies on your browser to track purchases. This data is collected and controlled by Amazon, not by us. See Section 5 for full details.</li>
+      </ul>
+      <div class="info-box">
+        <p>ℹ️ We do not use contact forms, newsletter sign-ups, or any data entry fields on our website. We do not collect any personal information from visitors.</p>
+      </div>
+    </div>
+
+    <!-- 3. How We Use -->
+    <div class="policy-section" id="how-we-use">
+      <span class="section-label">Section 03</span>
+      <h2>How We Use Your Information</h2>
+      <p>We use any information we receive solely for the following purposes:</p>
+      <ul>
+        <li>To understand general traffic patterns on our site so we can improve the content we offer (using anonymized, aggregated data only).</li>
+        <li>To maintain and operate our website in accordance with GitHub Pages hosting requirements.</li>
+        <li>To fulfill our obligations as an Amazon Associate, including ensuring our affiliate links are correctly formatted and our disclosures are visible.</li>
+      </ul>
+      <p>We do <strong>not</strong> use your information to send you unsolicited emails, serve you advertisements, build behavioral profiles, or sell to third-party data brokers.</p>
+    </div>
+
+    <!-- 4. Cookies -->
+    <div class="policy-section" id="cookies">
+      <span class="section-label">Section 04</span>
+      <h2>Cookies &amp; Tracking</h2>
+      <p>Our own website does not place any first-party cookies or tracking scripts on your device. However, when you click an affiliate link to Amazon, Amazon's website will use its own cookies and tracking mechanisms to identify purchases that originated from our referral links.</p>
+      <p>Amazon's affiliate tracking cookie typically lasts <strong>24 hours</strong>. If you purchase a product within 24 hours of clicking our link, we may receive a small commission from Amazon at no additional cost to you.</p>
+      <p>You can manage or disable cookies through your browser settings at any time. Doing so will not prevent you from visiting our site or viewing our content, though it may affect how Amazon's cart and checkout functions work.</p>
+      <div class="info-box">
+        <p>ℹ️ For more information on how to control cookies, visit <a href="https://www.allaboutcookies.org" target="_blank" rel="noopener">AllAboutCookies.org</a>, a free consumer resource.</p>
+      </div>
+    </div>
+
+    <!-- 5. Amazon Disclosure -->
+    <div class="amazon-band" id="amazon">
+      <div class="amazon-band-icon">🛒</div>
+      <div>
+        <h2>Amazon Affiliate Disclosure</h2>
+        <p class="amazon-disclosure-text">As an Amazon Associate, I earn from qualifying purchases.</p>
+        <p>HomeReno Picks participates in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.</p>
+        <p>This means that when you click a <strong>"View on Amazon"</strong> button on our site and make a purchase, we may earn a small commission. The price you pay is <strong>exactly the same</strong> — our commission comes from Amazon's existing margin, not from any markup charged to you.</p>
+        <p>Our product recommendations are based entirely on research, energy efficiency ratings, suitability for typical US home sizes, and long-term value for homeowners. We only feature products we genuinely believe are a strong fit for our audience. Affiliate commissions do not influence which products we feature or how we describe them.</p>
+      </div>
+    </div>
+
+    <!-- 6. Third Parties -->
+    <div class="policy-section" id="third-parties">
+      <span class="section-label">Section 06</span>
+      <h2>Third-Party Links &amp; Services</h2>
+      <p>Our website contains links to Amazon.com and may reference other external resources. Once you leave our site, you are subject to the privacy policies of those third-party websites. We are not responsible for the content, security, or privacy practices of any external sites.</p>
+      <p>Key third-party services that may be involved when you use our site:</p>
+      <ul>
+        <li><strong>Amazon.com:</strong> All "View on Amazon" buttons lead to Amazon's website. Amazon's data practices are governed by the <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ" target="_blank" rel="noopener">Amazon Privacy Notice</a>.</li>
+        <li><strong>GitHub Pages:</strong> Our site is hosted on GitHub Pages, a service of GitHub Inc. GitHub may collect server log data as described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</li>
+        <li><strong>Google Fonts:</strong> Our site uses Google Fonts for typography. Google may log font requests. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> for details.</li>
+      </ul>
+    </div>
+
+    <!-- 7. Children's Privacy -->
+    <div class="policy-section" id="childrens-privacy">
+      <span class="section-label">Section 07</span>
+      <h2>Children's Privacy</h2>
+      <p>HomeReno Picks is intended for adults, including homeowners, contractors, and families managing home renovation projects. Our website is not directed toward children under the age of 13.</p>
+      <p>We do not knowingly collect personal information from children under 13. If you believe a child has submitted personal information through our site, please be aware that our site has no forms or data entry fields, and we do not collect such information.</p>
+    </div>
+
+    <!-- 8. Data Security -->
+    <div class="policy-section" id="data-security">
+      <span class="section-label">Section 08</span>
+      <h2>Data Security</h2>
+      <p>Since our website is a static HTML site with no database, forms, or user account system, we hold no personal data about our visitors.</p>
+      <p>Our site is served over HTTPS via GitHub Pages, which means all data transmitted between your browser and our site is encrypted in transit. We take reasonable precautions to protect any personal information we do receive, though no method of transmission over the internet is 100% secure.</p>
+    </div>
+
+    <!-- 9. Your Rights -->
+    <div class="policy-section" id="your-rights">
+      <span class="section-label">Section 09</span>
+      <h2>Your Rights &amp; Choices</h2>
+      <p>As a visitor to our site, you have the following rights with respect to your personal information:</p>
+      <ul>
+        <li><strong>Opt-Out of Amazon Tracking:</strong> You can opt out of Amazon's interest-based advertising at <a href="https://www.amazon.com/adprefs" target="_blank" rel="noopener">amazon.com/adprefs</a>.</li>
+        <li><strong>Cookie Control:</strong> You can disable cookies through your browser settings at any time.</li>
+        <li><strong>Do Not Track:</strong> Our static website does not run tracking scripts, so no additional Do Not Track (DNT) configuration is needed on our end.</li>
+      </ul>
+      <div class="info-box">
+        <p>ℹ️ <strong>California residents:</strong> Under the California Consumer Privacy Act (CCPA), you have the right to know, delete, and opt out of the sale of personal information. We do not collect or sell personal data.</p>
+      </div>
+      <div class="info-box">
+        <p>ℹ️ <strong>Virginia residents:</strong> Under the Virginia Consumer Data Protection Act (VCDPA), you have rights to access, correct, delete, and opt out of targeted advertising. We do not conduct targeted advertising or collect personal data.</p>
+      </div>
+    </div>
+
+    <!-- 10. Changes -->
+    <div class="policy-section" id="changes">
+      <span class="section-label">Section 10</span>
+      <h2>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or the services we offer. When we make changes, we will update the <strong>Effective Date</strong> at the top of this page.</p>
+      <p>We encourage you to review this policy periodically. Your continued use of our website after any changes take effect means you accept the updated policy. If we make material changes that significantly affect how we handle personal information, we will make reasonable efforts to notify you.</p>
+    </div>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <strong>HomeReno Picks</strong> — Trusted Home Renovation &amp; Appliance Guide for US Homeowners<br>
+    <span class="orange">As an Amazon Associate, I earn from qualifying purchases.</span>
+    <hr class="footer-divider" />
+    <a href="index.html">Home</a> &nbsp;·&nbsp;
+    <a href="privacy-policy.html">Privacy Policy</a><br><br>
+    &copy; 2025 HomeReno Picks. All rights reserved. | United States
+  </footer>
+
+</body>
+</html>
