@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HomeReno Picks | Curated Home Renovation & Kitchen Appliance Guide</title>
+  <meta name="description" content="HomeReno Picks — handpicked, energy-efficient home renovation tools and kitchen appliances for US homeowners and builders. Every product chosen for durability and long-term savings." />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange:     #E8531A;
+      --orange-lt:  #F47B4A;
+      --orange-pale:#FFF0E9;
+      --navy:       #1B3A5C;
+      --navy-lt:    #2C5282;
+      --gold:       #F5A623;
+      --white:      #FFFFFF;
+      --cream:      #FAFAF8;
+      --band:       #F2EDE8;
+      --border:     #E0D8D0;
+      --text:       #2D2D2D;
+      --muted:      #6B6B6B;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    /* ── DISCLOSURE STRIP ── */
+    .disclosure-strip {
+      background: var(--navy);
+      color: rgba(255,255,255,0.85);
+      text-align: center;
+      padding: 9px 16px;
+      font-size: 12.5px;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+    }
+    .disclosure-strip strong { color: var(--gold); }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--white);
+      border-bottom: 2px solid var(--orange);
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 58px;
+    }
+    .nav-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: 0.5px;
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--orange); }
+    .nav-links {
+      display: flex;
+      gap: 6px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy);
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-links a:hover { background: var(--orange-pale); color: var(--orange); }
+    @media (max-width: 560px) { .nav-links { display: none; } }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(145deg, var(--navy) 0%, #0F2540 100%);
+      color: var(--white);
+      padding: 60px 24px 52px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -80px;
+      width: 340px; height: 340px;
+      background: radial-gradient(circle, rgba(232,83,26,0.18) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -120px; left: -60px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(232,83,26,0.10) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      padding: 5px 14px;
+      border-radius: 30px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(36px, 8vw, 64px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.5px;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--orange-lt);
+    }
+    .hero-sub {
+      font-size: clamp(15px, 2.5vw, 17px);
+      color: rgba(255,255,255,0.78);
+      max-width: 520px;
+      margin: 0 auto 28px;
+      position: relative;
+      z-index: 1;
+      line-height: 1.6;
+    }
+    .hero-badges {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      position: relative;
+      z-index: 1;
+    }
+    .badge {
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.20);
+      color: rgba(255,255,255,0.88);
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 30px;
+    }
+
+    /* ── SECTION WRAPPER ── */
+    .section { padding: 52px 20px; }
+    .section-inner { max-width: 960px; margin: 0 auto; }
+    .section-alt { background: var(--band); }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--orange);
+      margin-bottom: 10px;
+    }
+    .section-header h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(26px, 5vw, 36px);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.15;
+      letter-spacing: 0.2px;
+    }
+    .section-header p {
+      font-size: 15px;
+      color: var(--muted);
+      margin-top: 8px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ── PRODUCT GRID ── */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .product-card:hover {
+      box-shadow: 0 8px 28px rgba(27,58,92,0.12);
+      transform: translateY(-3px);
+    }
+
+    .card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      background: var(--band);
+    }
+
+    /* emoji placeholder image */
+    .card-img-placeholder {
+      width: 100%;
+      height: 180px;
+      background: linear-gradient(135deg, var(--band) 0%, #E8E0D8 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 56px;
+    }
+
+    .card-body {
+      padding: 18px 18px 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .card-tag {
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--orange);
+      margin-bottom: 6px;
+    }
+    .card-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .card-desc {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.6;
+      flex: 1;
+      margin-bottom: 16px;
+    }
+    .card-perks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .perk {
+      background: var(--orange-pale);
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 20px;
+    }
+    .btn-amazon {
+      display: block;
+      background: var(--orange);
+      color: var(--white);
+      text-align: center;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 13px 18px;
+      border-radius: 8px;
+      transition: background 0.18s, transform 0.15s;
+      letter-spacing: 0.2px;
+    }
+    .btn-amazon:hover {
+      background: #C94310;
+      transform: translateY(-1px);
+    }
+    .btn-amazon::after { content: ' →'; }
+
+    /* ── WHY US STRIP ── */
+    .why-strip {
+      background: var(--orange);
+      color: var(--white);
+      padding: 36px 24px;
+    }
+    .why-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 28px;
+      text-align: center;
+    }
+    .why-item strong {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      display: block;
+      margin-bottom: 4px;
+      letter-spacing: 0.3px;
+    }
+    .why-item span {
+      font-size: 13.5px;
+      opacity: 0.88;
+    }
+    .why-icon { font-size: 28px; display: block; margin-bottom: 8px; }
+
+    /* ── DISCLAIMER BAND ── */
+    .disclaimer-band {
+      background: #EFF6FF;
+      border-top: 3px solid var(--navy-lt);
+      padding: 20px 24px;
+      text-align: center;
+      font-size: 13.5px;
+      color: var(--navy);
+    }
+    .disclaimer-band strong { font-weight: 700; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.65);
+      padding: 36px 24px;
+      text-align: center;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+    footer strong { color: var(--white); }
+    .footer-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 6px;
+      display: block;
+    }
+    .footer-logo span { color: var(--orange-lt); }
+    .footer-affil {
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 13.5px;
+    }
+    footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
+    footer a:hover { color: var(--orange-lt); text-decoration: underline; }
+    .footer-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.10);
+      margin: 18px auto;
+      max-width: 360px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Affiliate Disclosure Strip -->
+  <div class="disclosure-strip">
+    <strong>Affiliate Disclosure:</strong> As an Amazon Associate, I earn from qualifying purchases — at no extra cost to you.
+  </div>
+
+  <!-- Nav -->
+  <nav>
+    <a class="nav-logo" href="#"><span>Home</span>Reno Picks</a>
+    <ul class="nav-links">
+      <li><a href="#kitchen">Kitchen</a></li>
+      <li><a href="#tools">Power Tools</a></li>
+      <li><a href="#flooring">Flooring & Paint</a></li>
+      <li><a href="#safety">Safety & Lighting</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <span class="hero-eyebrow">Curated for US Homeowners & Builders</span>
+    <h1>Smart Picks for<br><em>Every Renovation</em></h1>
+    <p class="hero-sub">Handpicked, Energy Star-rated home renovation tools and kitchen appliances — chosen for durability, energy savings, and long-term value for American families.</p>
+    <div class="hero-badges">
+      <span class="badge">✅ Energy Star Certified</span>
+      <span class="badge">🏗️ Builder Approved</span>
+      <span class="badge">💰 Budget-Conscious Picks</span>
+      <span class="badge">📦 Ships via Amazon</span>
+    </div>
+  </section>
+
+  <!-- Why Us Strip -->
+  <div class="why-strip">
+    <div class="why-inner">
+      <div class="why-item">
+        <span class="why-icon">🔍</span>
+        <strong>Thoroughly Researched</strong>
+        <span>Every product vetted for quality, ratings, and real-world durability</span>
+      </div>
+      <div class="why-item">
+        <span class="why-icon">⚡</span>
+        <strong>Energy Efficient</strong>
+        <span>Prioritizing Energy Star ratings to lower your monthly utility bills</span>
+      </div>
+      <div class="why-item">
+        <span class="why-icon">🛠️</span>
+        <strong>Built to Last</strong>
+        <span>No flimsy picks — only products with proven build quality and warranties</span>
+      </div>
+      <div class="why-item">
+        <span class="why-icon">🇺🇸</span>
+        <strong>Made for US Homes</strong>
+        <span>Sized and spec'd for standard American home layouts and electrical codes</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- KITCHEN APPLIANCES -->
+  <section class="section" id="kitchen">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-eyebrow">Category 01</span>
+        <h2>Kitchen Appliances</h2>
+        <p>Compact, energy-efficient appliances engineered for modern American kitchens — townhomes, condos, and full renovations alike.</p>
+      </div>
+      <div class="product-grid">
+
+        <div class="product-card">
+          <div class="card-img-placeholder">🍽️</div>
+          <div class="card-body">
+            <span class="card-tag">Dishwasher</span>
+            <h3 class="card-title">Bosch 300 Series 24" Dishwasher</h3>
+            <p class="card-desc">This Energy Star-certified dishwasher uses just 3.5 gallons per cycle — well below the 6-gallon standard — making it one of the most water-efficient units available for full-sized US kitchens. Its compact 24-inch profile fits standard cabinet openings in townhomes and condos without any remodeling. The stainless steel tub resists odors and holds heat better than plastic alternatives, extending the appliance's functional life and reducing long-term replacement costs.</p>
+            <div class="card-perks">
+              <span class="perk">Energy Star</span>
+              <span class="perk">3.5 gal/cycle</span>
+              <span class="perk">24" Compact</span>
+            </div>
+            <a href="https://www.amazon.com/s?k=Bosch+300+Series+24+inch+dishwasher&tag=YOURTAG-20" target="_blank" rel="noopener sponsored" class="btn-amazon">View on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-img-placeholder">❄️</div>
+          <div class="card-body">
+            <span class="card-tag">Refrigerator</span>
+            <h3 class="card-title">GE 18 Cu. Ft. Top-Freezer Refrigerator</h3>
+            <p class="card-desc">Rated at just 400 kWh per year, this GE top-freezer model is among the lowest energy consumers in its class, translating to roughly $48 in annual electricity costs at average US rates. At 28 inches wide, it fits comfortably in galley kitchens and rental-unit renovations without requiring cabinet modifications. The reversible door hinge makes installation flexible in tight spaces — a feature contractors specifically request for back-to-back unit builds.</p>
+            <div class="card-perks">
+              <span class="perk">Energy Star</span>
+              <span class="perk">400 kWh/yr</span>
+              <span class="perk">28" Wide</span>
+            </div>
+            <a href="https://www.amazon.com/s?k=GE+18+cu+ft+top+freezer+refrigerator&tag=YOURTAG-20" target="_blank" rel="noopener sponsored" class="btn-amazon">View on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-img-placeholder">🌀</div>
+          <div class="card-body">
+            <span class="card-tag">Washer</span>
+            <h3 class="card-title">LG 4.5 Cu. Ft. Front Load Washer</h3>
+            <p class="card-desc">This LG front-loader earns Energy Star's "Most Efficient" designation, using 74% less energy and 75% less water than top-loaders from a decade ago — a meaningful saving for families watching utility budgets. Its stackable design is ideal for townhome laundry closets and condo utility rooms where square footage is limited. The 6Motion technology reduces wear on fabrics while cutting cycle times, meaning clothes last longer and maintenance calls are fewer.</p>
+            <div class="card-perks">
+              <span class="perk">Most Efficient</span>
+              <span class="perk">Stackable</span>
+              <span class="perk">74% Less Energy</span>
+            </div>
+            <a href="https://www.amazon.com/s?k=LG+4.5+cu+ft+front+load+washer+energy+star&tag=YOURTAG-20" target="_blank" rel="noopener sponsored" class="btn-amazon">View on Amazon</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- POWER TOOLS -->
+  <section class="section section-alt" id="tools">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-eyebrow">Category 02</span>
+        <h2>Power Tools</h2>
+        <p>Contractor-grade tools chosen for durability, battery compatibility, and performance across framing, finishing, and everything in between.</p>
+      </div>
+      <div class="product-grid">
+
+        <div class="product-card">
+          <div class="card-img-placeholder">🔧</div>
+          <div class="card-body">
+            <span class="card-tag">Drill / Driver</span>
+            <h3 class="card-title">DEWALT 20V MAX Cordless Drill Combo Kit</h3>
+            <p class="card-desc">DEWALT's 20V MAX platform is the most widely used battery system among US residential contractors, meaning one battery family powers over 100 compatible tools — a critical advantage for renovation crews who manage tool inventories across multiple job sites. The brushless motor delivers 535 in-lbs of torque while extending battery life by 25% over brushed models, reducing mid-job recharging downtime. The included XR 2.0Ah and 4.0Ah batteries cover both light finish work and heavy drilling in a single kit purchase.</p>
+            <div class="card-perks">
+              <span class="perk">20V MAX Platform</span>
+              <span class="perk">Brushless Motor</span>
+              <span class="perk">535 in-lbs Torque</span>
+            </div>
+            <a href="https://www.amazon.com/s?k=DEWALT+20V+MAX+cordless+drill+combo+kit&tag=YOURTAG-20" target="_blank" rel="noopener sponsored" class="btn-amazon">View on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-img-placeholder">🪚</div>
+          <div class="card-body">
+            <span class="card-tag">Circular Saw</span>
+            <h3 class="card-title">Makita 7-1/4" Circular Saw (5007MGA)</h3>
+            <p class="card-desc">The Makita 5007MGA is a go-to on residential framing sites for its 15-amp motor that cuts through 2x framing lumber and engineered panels in a single clean pass, eliminating the need for multiple passes that slow down rough framing schedules. Its magnesium components shave weight versus cast-aluminum competitors, reducing fatigue during all-day overhead and vertical cuts. The electric brake stops the blade in under 2 seconds, meeting OSHA safety expectations on supervised job sites.</p>
+            <div class="card-perks">
+              <span class="perk">15-Amp Motor</span>
+              <span class="perk">Magnesium Build</span>
+              <span class="perk">Electric Brake</span>
+            </div>
+            <a href="https://www.amazon.com/s?k=Makita+5007MGA+circular+saw&tag=YOURTAG-20" target="_blank" rel="noopener sponsored" class="btn-amazon">View on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-img-placeholder">📐</div>
+          <div class="card-body">
+            <span class="card-tag">Laser Level</span>
+            <h3 class="card-title">Bosch GLL 40-20G Cross-Line Laser Level</h3>
+            <p class="card-desc">Accurate tile layout, cabinet installation, and trim work all depend on a reliable reference line — the Bosch GLL 40-20G projects a bright green beam visible up to 40 feet in standard indoor lighting conditions, outperforming red-beam alternatives in ambient light by a significant margin. The self-leveling pendulum locks within 4° and compensates automatically, cutting setup time versus manual bubble levels by several minutes per station. A magnetic mounting bracket allows hands-free placement on metal studs, drywall tracks, and door frames.</p>
+            <div class="card-perks">
+              <span class="perk">40 ft Range</span>
+              <span class="perk">Self-Leveling</span>
+              <span class="perk">Green Beam</span>
+            </div>
+            <a href="https://www.amazon.com/s?k=Bosch+GLL+40-20G+cross+line+laser+level&tag=YOURTAG-20" target="_blank" rel="noopener sponsored" class="btn-amazon">View on Amazon</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOORING & PAINT -->
+  <section class="section" id="flooring">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-eyebrow">Category 03</span>
+        <h2>Flooring & Paint</h2>
+        <p>Surfaces that hold up under real foot traffic, humidity swings, and the demands of busy American households.</p>
+      </div>
+      <div class="product-grid">
+
+        <div class="product-card">
+          <div class="card-img-placeholder">🪵</div>
+          <div class="card-body">
+            <span class="card-tag">Flooring</span>
+            <h3 class="card-title">LifeProof Vinyl Plank Flooring (LVP)</h3>
+            <p class="card-desc">LifeProof's 100% waterproof core makes it the top-recommended LVP for kitchens, bathrooms, and below-grade basement renovations where moisture is a consistent concern in US climates. At 8mm thick with an attached underlayment, it floats over minor subfloor imperfections without requiring expensive leveling compounds — a real cost-saver during gut renovations. The 12 mil wear layer withstands pet claws, furniture legs, and high-traffic entryways without the fading or denting that affects thinner budget alternatives.</p>
+            <div class="card-perks">
+              <span class="perk">100% Waterproof</span>
+              <span class="perk">8mm Thick</span>
+              <span class="perk">12 mil Wear Layer</span>
+            </div>
+            <a href="https://www.amazon.com/s?k=LifeProof+vinyl+plank+flooring+LVP&tag=YOURTAG-20" target="_blank" rel="noopener sponsored" class="btn-amazon">View on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-img-placeholder">🎨</div>
+          <div class="card-body">
+            <span class="card-tag">Interior Paint</span>
+            <h3 class="card-title">Behr Premium Plus Ultra Interior Paint & Primer</h3>
+            <p class="card-desc">Behr's Premium Plus Ultra combines paint and primer in a single product that achieves full coverage in one coat on previously painted surfaces — cutting labor time roughly in half on repainting projects compared to separate prime-and-paint workflows. The scrubbable, stain-resistant finish holds up to repeated cleaning in kitchens and bathrooms without losing sheen, important for properties that will be rented or resold. Its zero-VOC formulation meets indoor air quality standards and allows same-day re-occupancy after application.</p>
+            <div class="card-perks">
+              <span class="perk">Zero VOC</span>
+              <span class="perk">Paint + Primer</span>
+              <span class="perk">1-Coat Coverage</span>
+            </div>
+            <a href="https://www.amazon.com/s?k=Behr+Premium+Plus+Ultra+interior+paint+primer&tag=YOURTAG-20" target="_blank" rel="noopener sponsored" class="btn-amazon">View on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-img-placeholder">🪣</div>
+          <div class="card-body">
+            <span class="card-tag">Paint Sprayer</span>
+            <h3 class="card-title">Graco Magnum X5 Airless Paint Sprayer</h3>
+            <p class="card-desc">The Graco Magnum X5 handles up to 75 feet of hose and sprays unthinned latex paint directly from the bucket — eliminating the time spent on thinning and straining that slows down production painting on renovation sites. Its stainless steel piston pump is designed for annual contractor-level use, resisting the corrosion and wear that shortens the life of consumer-grade sprayers. Adjustable pressure control lets one person spray fine interior trim and heavy exterior coats with the same unit, reducing tool inventory.</p>
+            <div class="card-perks">
+              <span class="perk">75 ft Hose</span>
+              <span class="perk">Unthinned Paint</span>
+              <span class="perk">Stainless Pump</span>
+            </div>
+            <a href="https://www.amazon.com/s?k=Graco+Magnum+X5+airless+paint+sprayer&tag=YOURTAG-20" target="_blank" rel="noopener sponsored" class="btn-amazon">View on Amazon</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SAFETY & LIGHTING -->
+  <section class="section section-alt" id="safety">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-eyebrow">Category 04</span>
+        <h2>Safety & Lighting</h2>
+        <p>Code-compliant safety devices and LED lighting upgrades that reduce long-term maintenance costs and improve home safety ratings.</p>
+      </div>
+      <div class="product-grid">
+
+        <div class="product-card">
+          <div class="card-img-placeholder">🔥</div>
+          <div class="card-body">
+            <span class="card-tag">Smoke & CO Detector</span>
+            <h3 class="card-title">Kidde Combination Smoke & CO Alarm (Hardwired)</h3>
+            <p class="card-desc">Most US building codes now require combination smoke and carbon monoxide detection in new construction and major renovations — the Kidde hardwired model satisfies both requirements in a single ceiling unit, reducing the number of devices to install and maintain per room. Interconnect capability lets up to 24 units trigger simultaneously when one alarm sounds, meeting the interconnection requirements that many state codes mandate for multi-room installations. The sealed lithium battery backup ensures the alarm functions during power outages, a common concern after severe weather events.</p>
+            <div class="card-perks">
+              <span class="perk">Code Compliant</span>
+              <span class="perk">Hardwired</span>
+              <span class="perk">Interconnectable</span>
+            </div>
+            <a href="https://www.amazon.com/s?k=Kidde+combination+smoke+CO+alarm+hardwired&tag=YOURTAG-20" target="_blank" rel="noopener sponsored" class="btn-amazon">View on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-img-placeholder">💡</div>
+          <div class="card-body">
+            <span class="card-tag">LED Recessed Lighting</span>
+            <h3 class="card-title">Sunco 6" Recessed LED Downlights (12-Pack)</h3>
+            <p class="card-desc">At 11 watts per fixture replacing 65-watt incandescents, Sunco's dimmable downlights cut lighting energy consumption by 83% — a significant reduction in homes with 20 or more ceiling fixtures. The IC-rated, airtight design meets Energy Star requirements and qualifies for utility rebates offered in most US states, often reducing net purchase cost below standard fixture alternatives. Rated for 25,000 hours, these fixtures outlast incandescent and CFL alternatives by 10 to 25 years, effectively eliminating bulb replacement as a maintenance task for most homeowners.</p>
+            <div class="card-perks">
+              <span class="perk">Energy Star</span>
+              <span class="perk">83% Less Energy</span>
+              <span class="perk">25,000 hr Rated</span>
+            </div>
+            <a href="https://www.amazon.com/s?k=Sunco+6+inch+recessed+LED+downlight+12+pack&tag=YOURTAG-20" target="_blank" rel="noopener sponsored" class="btn-amazon">View on Amazon</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-img-placeholder">🌡️</div>
+          <div class="card-body">
+            <span class="card-tag">Smart Thermostat</span>
+            <h3 class="card-title">Google Nest Thermostat (4th Gen)</h3>
+            <p class="card-desc">The Nest Thermostat has been independently verified to save an average of 10–12% on heating bills and 15% on cooling bills compared to manual thermostats, with payback periods under two years in most US climates — a compelling value-add for homeowners and renters focused on long-term utility savings. Its Farsight feature activates the display when it senses someone nearby, eliminating the need to walk up to check temperature, a convenience detail appreciated in open-plan renovation layouts. Compatibility with over 95% of 24V heating and cooling systems means it installs in most existing US homes without rewiring.</p>
+            <div class="card-perks">
+              <span class="perk">Energy Star</span>
+              <span class="perk">15% Cooling Savings</span>
+              <span class="perk">95% Compatible</span>
+            </div>
+            <a href="https://www.amazon.com/s?k=Google+Nest+Thermostat+4th+gen&tag=YOURTAG-20" target="_blank" rel="noopener sponsored" class="btn-amazon">View on Amazon</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer Band -->
+  <div class="disclaimer-band">
+    <strong>Pricing & Availability Notice:</strong> Product prices and availability are accurate as of the date of our last review and are subject to change. Always verify the current price on Amazon before purchasing.
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <span class="footer-logo"><span>Home</span>Reno Picks</span>
+    <div class="footer-affil">As an Amazon Associate, I earn from qualifying purchases.</div>
+    <hr class="footer-divider" />
+    <a href="privacy-policy.html">Privacy Policy</a><br><br>
+    HomeReno Picks is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.<br><br>
+    &copy; 2025 HomeReno Picks. All rights reserved. | United States
+  </footer>
+
+</body>
+</html>
